@@ -1,0 +1,41 @@
+{
+    "name": "camtjs",
+    "version": "0.0.1",
+    "description": "JS package to work with CAMT transactions",
+    "scripts": {
+        "prebuild": "rimraf dist",
+        "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "types": "dist/types/index.d.ts",
+    "exports": {
+        "import": {
+            "path": "./dist/esm/index.js",
+            "type": "module"
+        },
+        "require": {
+            "path": "./dist/cjs/index.js",
+            "type": "commonjs"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/proohit/camtjs.git"
+    },
+    "keywords": [
+        "camt",
+        "js"
+    ],
+    "author": "proohit",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/proohit/camtjs/issues"
+    },
+    "homepage": "https://github.com/proohit/camtjs#readme",
+    "devDependencies": {
+        "rimraf": "^3.0.2",
+        "typescript": "^4.8.4"
+    }
+}
