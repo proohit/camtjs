@@ -14,14 +14,8 @@
         "dist"
     ],
     "exports": {
-        "import": {
-            "path": "./dist/esm/index.js",
-            "type": "module"
-        },
-        "require": {
-            "path": "./dist/cjs/index.js",
-            "type": "commonjs"
-        }
+        "import": "./dist/esm/index.js",
+        "require": "./dist/cjs/index.js"
     },
     "repository": {
         "type": "git",
