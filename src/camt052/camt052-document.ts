@@ -1,6 +1,6 @@
 import { parseBooleans, parseNumbers } from 'xml2js/lib/processors';
+import { parseStringToXml } from '../xml-parser';
 import { renameTags } from './camt052-utils';
-import { parseStringToXml } from './xml-parser';
 
 export class Camt052 {
   document: Camt052Document | null = null;
