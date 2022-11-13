@@ -5,7 +5,11 @@ import { renameTags } from './camt052-utils';
 export class Camt052 {
   document: Camt052Document | null = null;
 
-  public async parseCamt(xml: string): Promise<Camt052> {
+  constructor(camt052Document: Camt052Document) {
+    this.document = camt052Document;
+  }
+
+  public static async parseCamt(xml: string): Promise<Camt052> {
     const xmlDocument = await parseStringToXml<Camt052DocumentRoot>(xml, {
       charkey: 'value',
       attrkey: 'attributes',
@@ -15,14 +19,14 @@ export class Camt052 {
       preserveChildrenOrder: true,
       explicitArray: false,
     });
-    this.document = xmlDocument.Document;
-    return this;
+    return new Camt052(xmlDocument.Document);
   }
 }
 
-interface Camt052DocumentRoot {
+export interface Camt052DocumentRoot {
   Document: Camt052Document;
 }
+
 export interface Camt052Document {
   attributes: { xmlns: string };
   messageRoot: MessageRoot;
