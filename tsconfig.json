@@ -12,7 +12,8 @@
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "stripInternal": true,
-    "typeRoots": ["node_modules/@types", "src/typings"]
+    "typeRoots": ["node_modules/@types", "src/typings"],
+    "baseUrl": "."
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*"]
 }

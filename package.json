@@ -5,6 +5,7 @@
     "scripts": {
         "prebuild": "rimraf dist",
         "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
+        "lint": "eslint src --ext .ts",
         "prerelease": "npm run build",
         "release": "npm login && npm publish",
         "postrelease": "git push && git push --tags",
@@ -36,7 +37,13 @@
     "homepage": "https://github.com/proohit/camtjs#readme",
     "devDependencies": {
         "@types/xml2js": "^0.4.11",
+        "@typescript-eslint/eslint-plugin": "^5.42.1",
+        "@typescript-eslint/parser": "^5.42.1",
+        "eslint": "^8.27.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
         "npm-bump": "^0.0.32",
+        "prettier": "^2.7.1",
         "rimraf": "^3.0.2",
         "typescript": "^4.8.4"
     },
