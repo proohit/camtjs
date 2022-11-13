@@ -1,14 +1,14 @@
-import { parseBooleans, parseNumbers } from "xml2js/lib/processors";
-import { renameTags } from "./camt052-utils";
-import { parseStringToXml } from "./xml-parser";
+import { parseBooleans, parseNumbers } from 'xml2js/lib/processors';
+import { renameTags } from './camt052-utils';
+import { parseStringToXml } from './xml-parser';
 
 export class Camt052 {
   document: Camt052Document | null = null;
 
   public async parseCamt(xml: string): Promise<Camt052> {
     const xmlDocument = await parseStringToXml<Camt052DocumentRoot>(xml, {
-      charkey: "value",
-      attrkey: "attributes",
+      charkey: 'value',
+      attrkey: 'attributes',
       tagNameProcessors: [renameTags],
       attrNameProcessors: [renameTags],
       valueProcessors: [parseNumbers, parseBooleans],
@@ -54,7 +54,7 @@ export interface Account {
 }
 
 export enum Currency {
-  Eur = "EUR",
+  Eur = 'EUR',
 }
 
 export interface AccountIdentification {
