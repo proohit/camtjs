@@ -5,6 +5,7 @@
     "declaration": true,
     "declarationDir": "dist/types",
     "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "noImplicitThis": true,

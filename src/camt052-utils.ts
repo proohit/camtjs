@@ -1,4 +1,4 @@
-const ATTRIBUTE_MAPPING = {
+export const ATTRIBUTE_MAPPING = {
   BkToCstmrAcctRpt: 'messageRoot',
   GrpHdr: 'groupHeader',
   Rpt: 'report',
