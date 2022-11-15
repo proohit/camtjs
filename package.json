@@ -1,6 +1,6 @@
 {
     "name": "camtjs",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "JS package to work with CAMT transactions",
     "scripts": {
         "prebuild": "rimraf dist",
