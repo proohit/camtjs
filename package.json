@@ -12,6 +12,7 @@
         "release": "npm login && npm publish",
         "postrelease": "git push && git push --tags"
     },
+    "type": "module",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
     "types": "dist/types/index.d.ts",
