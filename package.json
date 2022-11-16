@@ -6,7 +6,7 @@
         "prebuild": "rimraf dist",
         "build": "npm run build:esm & npm run build:cjs",
         "postbuild": "hybrid-package-json --target-esm dist/esm --target-cjs dist/cjs",
-        "build:esm": "tsc -p tsconfig.esm.json",
+        "build:esm": "tsc -p tsconfig.esm.json && tsc-esm-fix --target=dist/esm",
         "build:cjs": "tsc -p tsconfig.cjs.json",
         "lint": "eslint src --ext .ts",
         "test": "jest",
@@ -54,6 +54,7 @@
         "prettier": "^2.7.1",
         "rimraf": "^3.0.2",
         "ts-jest": "^29.0.3",
+        "tsc-esm-fix": "^2.20.5",
         "typescript": "^4.8.4"
     },
     "dependencies": {
